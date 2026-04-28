@@ -8,11 +8,14 @@ function SignatureSenses() {
 
   return (
     <main className="page">
+      {/* HERO */}
       <section className="hero">
+        <div className="glow" />
+
         <motion.h1
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 1 }}
           className="brand"
         >
           SIGNATURE SENSES
@@ -31,33 +34,49 @@ function SignatureSenses() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button type="submit">Request Access</button>
+          <button>Request Access</button>
         </form>
       </section>
 
+      {/* STATEMENT */}
       <section className="statement">
         <h2>Your scent is your signature.</h2>
         <p>
-          We design immersive scent experiences that define spaces through emotion,
-          memory, and identity.
+          We design immersive scent experiences that define spaces through
+          emotion, memory, and identity.
         </p>
       </section>
 
+      {/* FEATURES */}
       <section className="features">
-        <article className="card">
+        <div className="card">
           <h3>Bespoke Scents</h3>
           <p>Curated fragrance profiles tailored to your identity.</p>
-        </article>
+        </div>
 
-        <article className="card">
+        <div className="card">
           <h3>Minimal Design</h3>
-          <p>Sculptural diffuser systems designed with architectural precision.</p>
-        </article>
+          <p>
+            Sculptural diffuser systems designed with architectural precision.
+          </p>
+        </div>
 
-        <article className="card">
+        <div className="card">
           <h3>Evolving Identity</h3>
-          <p>Your scent evolves with your lifestyle and emotional state.</p>
-        </article>
+          <p>
+            Your scent evolves with your lifestyle and emotional state.
+          </p>
+        </div>
+      </section>
+
+      {/* PRODUCT TEASER */}
+      <section className="product">
+        <p className="coming">Coming Soon</p>
+        <h2>A sculptural diffuser for the atmosphere you choose.</h2>
+        <p>
+          Designed for modern spaces, Signature Senses will bring personalized
+          scent identity into the home with quiet precision.
+        </p>
       </section>
 
       <footer>© 2026 Signature Senses. Private Luxury Experience</footer>
