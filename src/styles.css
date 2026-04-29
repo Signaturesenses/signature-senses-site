@@ -1,84 +1,125 @@
-* {
-  box-sizing: border-box;
-}
-
-html, body, #root {
+html,
+body,
+#root {
   margin: 0;
+  width: 100%;
   min-height: 100%;
-  background: #000;
-  color: #fff;
-  font-family: Inter, Helvetica, Arial, sans-serif;
 }
 
-.page {
-  min-height: 100vh;
+body {
+  background: #000;
+  color: #f5efe7;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.85)),
+    url("/images/signature-senses-hero.png");
+  background-size: cover;
+  background-position: center top;
   text-align: center;
-  padding: 120px 24px;
 }
 
-.brand {
-  font-size: 80px;
-  font-weight: 200;
-  letter-spacing: 0.3em;
+.header {
+  height: 92px;
+  border-bottom: 1px solid rgba(220, 190, 145, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 42px;
+}
+
+.logo-text {
+  color: #d8b982;
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 3px;
+}
+
+.tagline-top {
+  letter-spacing: 7px;
+  font-size: 11px;
+  color: #d8c4a6;
+}
+
+.menu {
+  color: #d8b982;
+  font-size: 28px;
+}
+
+.hero-content {
+  padding-top: 95px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(56px, 8vw, 104px);
+  letter-spacing: 26px;
+  font-weight: 300;
+  line-height: 1.15;
   margin: 0;
 }
 
-.slogan {
-  margin-top: 24px;
-  color: #ccc;
-  font-size: 20px;
+.hero-subtitle {
+  margin-top: 28px;
+  font-size: 22px;
 }
 
-.label {
-  margin-top: 12px;
-  font-size: 12px;
-  letter-spacing: 0.4em;
-  color: #777;
-}
-
-.access {
-  margin-top: 40px;
+.access-form {
+  margin-top: 34px;
   display: flex;
+  justify-content: center;
   gap: 12px;
 }
 
-.access input {
-  padding: 14px;
-  background: #111;
-  border: 1px solid #333;
+.access-form input {
+  width: 390px;
+  height: 56px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(216,196,166,0.45);
   color: white;
+  padding: 0 22px;
+  font-size: 15px;
 }
 
-.access button {
-  background: white;
-  color: black;
+.access-form button {
+  height: 58px;
+  padding: 0 42px;
   border: none;
-  padding: 14px 20px;
-  cursor: pointer;
+  background: #eee8df;
+  color: #4b3a2b;
+  letter-spacing: 4px;
+  font-weight: 700;
 }
 
-.statement {
-  text-align: center;
-  padding: 80px 24px;
-}
+@media (max-width: 700px) {
+  .header {
+    padding: 0 20px;
+  }
 
-.features {
-  display: flex;
-  gap: 20px;
-  padding: 40px;
-  justify-content: center;
-}
+  .tagline-top {
+    display: none;
+  }
 
-.card {
-  background: #111;
-  padding: 24px;
-  border: 1px solid #222;
+  .hero-content {
+    padding-top: 70px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: 12px;
+  }
+
+  .access-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .access-form input,
+  .access-form button {
+    width: 85%;
+  }
 }
