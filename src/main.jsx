@@ -1,11 +1,14 @@
-export default function App() {
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles.css";
+
+function App() {
   return (
     <div className="hero">
-      
       <div className="header">
-       <img src="/images/signature-senses-logo.png" className="logo-small" />
+        <div className="logo-text">SIGNATURE<br />SENSES</div>
         <div className="tagline-top">PRIVATE SCENT IDENTITY SYSTEM</div>
-        <div className="menu">≡</div>
+        <div className="menu">☰</div>
       </div>
 
       <div className="hero-content">
@@ -22,7 +25,8 @@ export default function App() {
           <button>REQUEST ACCESS</button>
         </div>
       </div>
-
     </div>
   );
 }
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
